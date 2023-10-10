@@ -15,15 +15,11 @@ Author URI: http://sergiiriabokon.medium.com
 
 // prohibit direct execution
 if ( !function_exists( 'register_post_type' ) ) {
-	echo 'Plugin is not supposed to be called directly.';
-	exit();
+	exit('The file is not supposed to be called directly.');
 }
 
-define( 'CUSTOMCOMISSIONS_DIR', plugin_dir_path( __FILE__ ) );
-
-require_once( CUSTOMCOMISSIONS_DIR . 'class-cc-admin.php' );
-require_once( CUSTOMCOMISSIONS_DIR . 'class-cc-product-price.php' );
-
+require_once( __DIR__ . '/class-cc-admin.php' );
+require_once( __DIR__ . '/class-cc-product-price.php' );
 
 CustomComissions_Admin::init();
 CustomComissions_Product_Price::init();

@@ -19,10 +19,10 @@ if ( !function_exists( 'register_post_type' ) ) {
 	exit();
 }
 
-define( 'CC__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'CUSTOMCOMISSIONS_DIR', plugin_dir_path( __FILE__ ) );
 
-require_once( CC__PLUGIN_DIR . 'class-cc-admin.php' );
-require_once( CC__PLUGIN_DIR . 'class-cc-product-price.php' );
+require_once( CUSTOMCOMISSIONS_DIR . 'class-cc-admin.php' );
+require_once( CUSTOMCOMISSIONS_DIR . 'class-cc-product-price.php' );
 
 
 CustomComissions_Admin::init();

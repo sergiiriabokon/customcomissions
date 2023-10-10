@@ -89,7 +89,6 @@ class CustomComissions_Admin {
             );
         }
     }
-    //add_action( 'save_post', 'cc_save_postdata' );
     
     public static function add_custom_box() {
         $screens = [ 'comission' ];
@@ -102,7 +101,6 @@ class CustomComissions_Admin {
             );
         }
     }
-    //add_action( 'add_meta_boxes', 'cc_add_custom_box' );
 
     public static function prod_edit_comission_tab() {
         global $post;

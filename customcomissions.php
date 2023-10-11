@@ -5,7 +5,7 @@
  * @author Sergii Riabokon
  */
 /*
-Plugin Name: Custom Comissions
+Plugin Name: Custom Commissions
 Plugin URI: http://github.com/sergiiriabokon/customcomissions
 Description: Adds custom commissions to the products price for WooCommerce
 Author: Serge Riabokon

@@ -1,5 +1,22 @@
 <?php
 
+/**
+ * Implements custom post type called Commissions. This new post type support 
+ * only the title and have a custom metabox called Commission settings. 
+ * 
+ * When adding/editing a commission following is specified:
+ *  - Title
+ *  - Commission settings
+ *   - Commission value (text field) - the value of the commission
+ *   - Product min. price (number field) - the minimum product price allowed 
+ *                                         to apply the commission on
+ *   - Product max. price (number field) - the maximum product price allowed 
+ *                                         to apply the commission on
+ * 
+ * On the product edit page the user is able to link the product with an existing
+ * commission through a new tab at the Product data called Commissions. When the user 
+ * clicks on this tab, a dropdown field is shown where only one commission can be selected.
+ */
 class CustomComissions_Admin {
 
     public static function init() {
@@ -95,7 +112,7 @@ class CustomComissions_Admin {
         foreach ( $screens as $screen ) {
             add_meta_box(
                 'cc_max_price',                 // Unique ID
-                'Comission Settings',           // Box title
+                'Commission Settings',           // Box title
                 array('CustomComissions_Admin', 'comission_settings'),        // Content callback, must be of type callable
                 $screen                         // Post type
             );
@@ -126,7 +143,7 @@ class CustomComissions_Admin {
 
     public static function custom_comission_tab( $default_tabs ) {
         $default_tabs['cc_comission'] = array(
-            'label'   =>  __( 'Comissions', 'domain' ),
+            'label'   =>  __( 'Commissions', 'domain' ),
             'target'  =>  'cc_custom_tab_data',
             'priority' => 10,
             'class'   => array()

@@ -1,5 +1,14 @@
 <?php
-
+/**
+ * Applies the comission on the frontend shop.
+ * 
+ * The commission should is applied by following these conditions:
+ * a. The product is linked to a commission
+ * b. The product price is between min and max values defined in the commission settings
+ * c. The calculation formula is:
+ *     FP = PP + CV 
+ *    (FPP - Final Product Price, PP - Product Price, CV - commission value)
+ */
 class CustomComissions_Product_Price {
 
     public static function init() {
